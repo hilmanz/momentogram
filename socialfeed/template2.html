@@ -1,0 +1,18 @@
+<li class="social-{{=it.social_network}} social-feed-element {{? !it.moderation_passed}}hidden{{?}}" dt-create="{{=it.dt_create}}" social-feed-id = "{{=it.id}}">
+    <div class='content'>
+        {{=it.attachment}}
+
+        <div class='text-wrapper'>
+            <p class="social-feed-text">{{=it.text}}</p>
+        </div>
+        <div class="media-body">
+            <a class="pull-left" href="{{=it.author_link}}" target="_blank">
+                <img class="media-object" src="{{=it.author_picture}}">
+            </a>
+            <p class="author">
+                <span class="author-title">{{=it.author_name}}</span>
+                <span class="muted pull-right"> {{=it.time_ago}}</span>  
+            </p>
+        </div>
+    </div>
+</li>

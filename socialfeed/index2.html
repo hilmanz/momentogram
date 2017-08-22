@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie ie6 no-js" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7 no-js" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8 no-js" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9 no-js" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
+    <head> 
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <title>MOMENTOGRAM</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="MOMENTOGRAM" />
+        <meta name="keywords" content="MOMENTOGRAM" />
+        <meta name="author" content="MOMENTOGRAM" />
+        <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.css" />
+        <link rel="stylesheet" type="text/css" href="vendor/prettyphoto/css/prettyPhoto.css" />
+        <link rel="stylesheet" type="text/css" href="css/animate.css" />
+        <link rel="stylesheet" type="text/css" href="vendor/eufont/eufont.css" />
+        <link rel="stylesheet" type="text/css" href="vendor/flipster/jquery.flipster.css" />
+        <link rel="stylesheet" type="text/css" href="vendor/magnific-popup/magnific-popup.css" />
+        <link rel="stylesheet" type="text/css" href="vendor/owlcarousel/owl.carousel.css" />
+        <link rel="stylesheet" type="text/css" href="vendor/owlcarousel/owl.theme.css" />
+        <link rel="stylesheet" type="text/css" href="vendor/owlcarousel/owl.transitions.css" />
+        <link rel="stylesheet" type="text/css" href="css/momentogram.css" />
+        <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+        <!-- jQuery -->
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <!-- Codebird.js - required for TWITTER -->
+        <script src="bower_components/codebird-js/codebird.js"></script>
+        <!-- doT.js for rendering templates -->
+        <script src="bower_components/doT/doT.min.js"></script>
+        <!-- Moment.js for showing "time ago" -->
+        <script src="bower_components/moment/min/moment.min.js"></script>
+        <!-- Social-feed js -->
+        <script src="js/jquery.socialfeed.js"></script>
+        <script src="vendor/flipster/jquery.flipster.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    </head>
+
+<body>
+
+<header>
+        <div id="fps">Framerate: 0/60 FPS</div>
+        <style type="text/css">
+/* hardware accelatator class */    
+    .trans3d
+    {
+        -webkit-transform-style: preserve-3d;
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform-style: preserve-3d;
+        -moz-transform: translate3d(0, 0, 0);
+        -ms-transform-style:preserve-3d;
+        -ms-transform: translate3d(0, 0, 0);
+        transform-style:preserve-3d;
+        transform: translate3d(0, 0, 0);
+
+        /*-webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -ms-backface-visibility:hidden;
+        backface-visibility:hidden;*/
+    }
+    
+    #contentContainer
+    {
+        position:absolute;
+        margin-left:-500px;
+        margin-top:-500px;
+        left:50%;
+        top:50%;
+        width:1000px;
+        height:1000px;
+    }
+    
+    #carouselContainer
+    {
+        position:absolute;
+        margin-left:-500px;
+        margin-top:-500px;
+        left:50%;
+        top:50%;
+        width:1000px;
+        height:1000px;
+    }
+    
+    .carouselItem
+    {
+        width:320px;
+        height:130px;
+        position:absolute;
+        left:50%;
+        top:50%;
+        margin-left:-160px;
+        margin-top:-90px;
+        visibility:hidden;
+    }
+    
+    .carouselItemInner
+    {
+        width:320px;
+        height:130px;
+        position:absolute;
+        background-color:rgba(255, 255, 255, .75);
+        border:10px solid rgba(255, 255, 255, .5);
+        color:aqua;
+        font-size:72px;
+        left:50%;
+        top:50%;
+        margin-left:-160px;
+        margin-top:-90px;
+        text-align:center;
+        padding-top:50px;
+        
+    }
+        </style>
+    </header>
+    
+    <div id="contentContainer" class="trans3d"> 
+    <section id="carouselContainer" class="trans3d">
+        <figure id="item1" class="carouselItem trans3d"><div class="carouselItemInner trans3d">1</div></figure>
+        <figure id="item2" class="carouselItem trans3d"><div class="carouselItemInner trans3d">2</div></figure>
+    </section>
+    </div>
+    <section class="stripe" style="display:none;">
+        <div class="container field">
+            <input type="text" class="input field-left" value="#openbondsworld" id="query">
+            <button class='button field-right' id="button-update"><i class="fa fa-refresh"></i></button>
+        </div>
+    </section>
+  <script type="text/javascript"></script>
+  
+    <script>
+    $(document).ready(function() {
+
+        var updateFeed = function() {
+            var initialQuery = $('#query').val();
+            initialQuery = initialQuery.replace(" ", "");
+            var queryTags = initialQuery.split(",");
+            $('#carouselContainer').socialfeed({
+                // Twitter
+                twitter: {
+                    accounts: queryTags,
+                    limit: 5,
+                    consumer_key: 'qzRXgkI7enflNJH1lWFvujT2P', // make sure to have your app read-only
+                    consumer_secret: '8e7E7gHuTwyDHw9lGQFO73FcUwz9YozT37lEvZulMq8FXaPl8O', // make sure to have your app read-only
+                },
+                // INSTAGRAM
+                instagram: {
+                    accounts: queryTags,
+                    limit: 5,
+                    client_id: '03df29c2901d48c7b5809849f235ce68'
+                },
+
+                // GENERAL SETTINGS
+                length: 200,
+                show_media: true,
+                // Moderation function - if returns false, template will have class hidden
+                moderation: function(content) {
+                    return (content.text) ? content.text.indexOf('fuck') == -1 : true;
+                },
+                //update_period: 5000,
+                // When all the posts are collected and displayed - this function is evoked
+                callback: function() {
+                    
+
+  // set and cache variables
+        var w, container, carousel, item, radius, itemLength, rY, ticker, fps; 
+        var mouseX = 0;
+        var mouseY = 0;
+        var mouseZ = 0;
+        var addX = 0;
+        
+        
+        // fps counter created by: https://gist.github.com/sharkbrainguy/1156092,
+        // no need to create my own :)
+        var fps_counter = {
+            
+            tick: function () 
+            {
+                // this has to clone the array every tick so that
+                // separate instances won't share state 
+                this.times = this.times.concat(+new Date());
+                var seconds, times = this.times;
+        
+                if (times.length > this.span + 1) 
+                {
+                    times.shift(); // ditch the oldest time
+                    seconds = (times[times.length - 1] - times[0]) / 1000;
+                    return Math.round(this.span / seconds);
+                } 
+                else return null;
+            },
+ 
+            times: [],
+            span: 20
+        };
+        var counter = Object.create(fps_counter);
+        
+        
+        
+        $(document).ready( init )
+        
+        function init()
+        {
+            w = $(window);
+            container = $( '#contentContainer' );
+            carousel = $( '#carouselContainer' );
+            item = $( '.carouselItem' );
+            itemLength = $( '.carouselItem' ).length;
+            fps = $('#fps');
+            rY = 360 / itemLength;
+            radius = Math.round( (250) / Math.tan( Math.PI / itemLength ) );
+            
+            // set container 3d props
+            TweenMax.set(container, {perspective:600})
+            TweenMax.set(carousel, {z:-(radius)})
+            
+            // create carousel item props
+            
+            for ( var i = 0; i < itemLength; i++ )
+            {
+                var $item = item.eq(i);
+                var $block = $item.find('.carouselItemInner');
+                
+        //thanks @chrisgannon!        
+        TweenMax.set($item, {rotationY:rY * i, z:radius, transformOrigin:"50% 50% " + -radius + "px"});
+                
+                animateIn( $item, $block )                      
+            }
+            
+            // set mouse x and y props and looper ticker
+            window.addEventListener( "mousemove", onMouseMove, false );
+            ticker = setInterval( looper, 1000/60 );            
+        }
+        
+        function animateIn( $item, $block )
+        {
+            var $nrX = 360 * getRandomInt(2);
+            var $nrY = 360 * getRandomInt(2);
+                
+            var $nx = -(2000) + getRandomInt( 4000 )
+            var $ny = -(2000) + getRandomInt( 4000 )
+            var $nz = -4
+            000 +  getRandomInt( 4000 )
+                
+            var $s = 1.5 + (getRandomInt( 10 ) * .1)
+            var $d = 1 - (getRandomInt( 8 ) * .1)
+            
+            TweenMax.set( $item, { autoAlpha:1, delay:$d } )    
+            TweenMax.set( $block, { z:$nz, rotationY:$nrY, rotationX:$nrX, x:$nx, y:$ny, autoAlpha:0} )
+            TweenMax.to( $block, $s, { delay:$d, rotationY:0, rotationX:0, z:0,  ease:Expo.easeInOut} )
+            TweenMax.to( $block, $s-.5, { delay:$d, x:0, y:0, autoAlpha:1, ease:Expo.easeInOut} )
+        }
+        
+        function onMouseMove(event)
+        {
+            mouseX = -(-(window.innerWidth * .5) + event.pageX) * .0025;
+            mouseY = -(-(window.innerHeight * .5) + event.pageY ) * .01;
+            mouseZ = -(radius) - (Math.abs(-(window.innerHeight * .5) + event.pageY ) - 200);
+        }
+        
+        // loops and sets the carousel 3d properties
+        function looper()
+        {
+            addX += mouseX
+            TweenMax.to( carousel, 1, { rotationY:addX, rotationX:mouseY, ease:Quint.easeOut } )
+            TweenMax.set( carousel, {z:mouseZ } )
+            fps.text( 'Framerate: ' + counter.tick() + '/60 FPS' )  
+        }
+        
+        function getRandomInt( $n )
+        {
+            return Math.floor((Math.random()*$n)+1);    
+        }
+                }
+            });
+        };
+
+        updateFeed();
+        function loadlink(){
+          $( "#button-update" ).trigger( "click" );
+            $(function(){ 
+                $(".flipster").flipster({
+                    style: 'carousel',
+                    autoplay: 500,
+                });
+            });
+        }
+        $('#button-update').click(function() {
+            $('#socialfeed').html('');
+            updateFeed();
+        });
+
+    });
+    </script>
+</body>
+
+</html>
+  

@@ -1,0 +1,576 @@
+#mobnav-btn,.mobnav-subarrow{
+	display:none;
+}
+@media (max-width: 1470px) {
+	body{
+		font-size:14px;
+	}
+	#route img{
+		max-width:250px;
+	}
+	#footerTop{
+		padding:50px 0;
+	}
+	#section2 .contentbanner{
+		margin:0 0 -100px 0;
+	}
+	#section3 .contentbanner{
+		margin:0 0 -70px 0;
+	}
+	.contentbanner h2, .thecontent h2, .container h2{
+		font-size:30px;
+	}
+	.contentbanner p, .thecontent p{
+		max-width:inherit;
+	}
+	#f45-1 p{
+		max-width:400px;
+	}
+	#myCountdown{
+		border:solid 1px #fff;
+		border-radius:5px;
+		display:inline-block;
+		width:85px; height:100px;
+		padding:10px 0 0 0;
+		position:absolute;
+		top:150px;
+	}
+	.countdown-section{
+		text-align:center;
+		text-transform:uppercase;
+	}
+	.countdown-amount{
+		font-family: 'bmw_groupbold';
+		font-size:60px;
+		line-height:60px;
+		position:absolute;
+		height:60px;
+		top:10px;
+		width:100%;
+		text-align:center;
+	}
+	.countdown-period{
+		border-top:solid 1px #fff;
+		text-align:center;
+		font-size:10px;
+		text-indent:-5000px;
+		position:absolute;
+		bottom:20px;
+		width:100%;
+	}
+	.countdown-period:after{
+		content:"Days To Launch";
+		display:block;
+		position:absolute;
+		top:0;
+		padding:5px 0;
+		text-indent:0;
+	}
+	#productGenius .centercontent p{
+		margin:0 0 10px 0;
+	}
+	#productGenius .centercontent{
+		padding:0;
+	}
+	#promotionDetail .thecontent{ padding:100px 0 70px 0;}
+	#namibia-5 #bannerpage{
+		max-height:450px;
+	}
+	.thecontent h3{
+		margin:10px 0;
+	}
+} 
+@media (max-width: 1100px) {
+	.navmenu a.drive_btn, a.drive_btn{
+		padding:0 35px 0 10px;
+	}
+	#namibia-5 #bannerpage{
+		max-height:500px;
+	}
+	body{
+		font-size:14px;
+	}
+	#namibia-1{
+		background-image: url(../images/namibia-1ipadl.jpg);
+	}
+	#namibia-1 .contentbanner{
+		margin:0 0 100px 0;
+	}
+	.navmenu a{
+		margin:0 12px 0 0;
+	}
+	.shape{
+		bottom:-45px;
+	}
+	.centercontent{
+		padding:50px 0;
+	}
+	#bannerpage{
+		padding:70px 0 0 0;
+		background:#2a5697;
+	}
+	.autoheight .col-md-6 br{
+		display:none;
+	}
+	.autoheight .contentbanner p,.autoheight .thecontent p{
+		
+	}
+	.routecontent{
+		max-width:400px;
+	}
+	#section2 .contentbanner,#section3 .contentbanner{
+		margin:0;
+	}
+	#f45-1.autoheight .col-md-6{
+		max-width:400px;
+	}
+	#f45-1 p{
+		max-width:250px;
+	}
+	.centercontent{
+		padding:30px 0;
+	}
+	#bannerpage{
+		background:#2a5697;
+	}
+	.img-1{
+		top:0px;
+	}
+	.img-3{
+		top:150px;
+	}
+	.img-4{
+		top:-100px;
+	}
+	.img-5{
+		top:0px;
+	}
+	.img-6{
+		top:0px;
+	}
+	.img-7{
+		top:0px;
+	}
+	.img-8{
+		top:0px;
+	}
+	.img-9{
+		top:0px;
+	}
+	#navbar{ display:none; }
+} 
+@media only screen and (max-width: 960px) {
+	#subscribe h3{
+		font-size:20px;
+	}
+	#route img{
+		margin:0 0 0 -100px;
+	}
+	#productGenius h2{
+		margin:20px 0 0 0; font-size:20px;}
+}
+
+
+@media only screen and (max-width: 800px) {
+	body{
+		font-size:16px;
+	}
+	#banner{
+  	  background-image: url(../images/1_ipad_p.jpg);
+	}
+	#f45-1{
+  	  background-image: url(../images/f1_ipad_p.jpg);
+	}
+	#section2{
+		background-image: url(../images/2_ipad_p.jpg);
+	}
+	#section3{
+		background-image: url(../images/3_p.jpg);
+	}
+	#namibia-1{
+		background-image: url(../images/namibia-1ipad.jpg);
+	}
+	#namibia-2{
+		background-image: url(../images/namibia-2s.jpg);
+	}
+	#namibia-3{
+		background-image: url(../images/namibia-3ipad.jpg);
+	}
+	#namibia-4{
+		background-image: url(../images/namibia-4ipad.jpg);
+	}
+	#bromo-1{
+		background-image: url(../images/bromo-1ipad.jpg);
+	}
+	#bromo-2{
+		background-image: url(../images/bromo-2ipad.jpg);
+	}
+	#bromo-3{
+		background-image: url(../images/bromo-3ipad.jpg);
+	}
+	#promo{
+		background-image: url(../images/promotion_ipad.jpg);
+	}
+	.contentbanner h2, .thecontent h2, .container h2{
+		font-size:30px;
+	}
+	.logo-nav{
+		float:none;
+	}
+	#navigation .col-md-8{
+	}
+	a.mdrive_btn{ margin:22px 30px; }
+	#mobnav-btn{
+		display:block;
+		float:left;
+		height:70px;
+		line-height:75px;
+    	font-family: 'bmw_groupbold';
+		cursor:pointer;
+	}
+    .mobnav-subarrow {
+        display: block;
+        height: 40px;
+        width: 100%;
+        position: absolute;
+        top: 8px;
+        right: 10px;
+        -webkit-transition: all .1s ease-in-out;
+        -moz-transition: all .1s ease-in-out;
+        -ms-transition: all .1s ease-in-out;
+        -o-transition: all .1s ease-in-out;
+        transition: all .1s ease-in-out;
+		cursor:pointer;
+    }
+	.mobnav-subarrow i:before{
+		display:block;
+		text-align:right;
+		line-height:20px;
+	}
+    .sf-menu {
+        width: 100%!important;
+        display: none;
+    }
+    .sf-menu.xactive {
+        display: block!important;
+		border-top:solid 1px #eee;
+		padding:0 0 40px 0;
+    }
+    .sf-menu li {
+        float: none!important;
+        display: block!important;
+        width: 100%!important;
+		padding:0;
+    }
+    .sf-menu li a {
+        float: none!important;
+		border-bottom:solid 1px #eee;
+    }
+    .sf-menu ul {
+        position:static!important;
+        display: none!important;
+    }
+    .xpopdrop ul {
+        display: block!important;
+		box-shadow:none;
+		padding:0 0 0 20px;
+    }
+	.sf-menu ul li:before{
+		display:block;
+		font-family: 'eufont';
+		speak: none;
+		font-style: normal;
+		font-weight: normal;
+		font-variant: normal;
+		text-transform: none;
+		line-height: 1;
+	
+		/* Better Font Rendering =========== */
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		content: "\ea6d";
+		color:#262626;
+		line-height:40px;
+		position:absolute;
+		left:-10px;
+	}
+	.xpopdrop .icon-chevron-right:before{
+		content: "\e671";
+	}
+	a.drive_btn{
+		display:none;
+	}
+	a.mdrive_btn{
+		display:inline-block;
+	}
+	#subscribe h3{ font-size:18px; }
+	#subscribe button{ padding:0 30px; }
+	.flex-control-nav{
+		bottom:20px;
+	}
+	#myCountdown{ top:10px; }
+	#banner .colmdcontent{
+		position:absolute;
+		top:600px;
+	}
+	#section2 .contentbanner, #section3 .contentbanner{
+		margin:0 0 100px 0;
+	}
+	.namibia1content{
+		position:relative;
+		margin:0 0 300px 0;
+		max-width:400px;
+	}
+	#namibia-5 h3{
+		font-size: 40px;
+		max-width: 400px;
+		margin: 30px 0 0 
+	}
+	.routecontainer{
+		width:90%;
+	}
+	#route{ display:none;}
+	#route img{
+		margin:0 0 0 200px;
+	}
+	.promocontent p{
+		max-width:400px;
+	}
+	#footerBottom .col-md-6{
+		width:50%;
+		float:left;
+	}
+	#footerBottom li{
+		margin:0 0 0 10px;
+	}
+	#namibia-1 .contentbanner{
+		margin:0;
+	}
+}
+@media (max-width: 500px) {
+	body{
+		font-size:14px;
+	}
+	#banner{
+  	  background-image: url(../images/1_s.jpg);
+	}
+	#f45-1{
+  	  background-image: url(../images/f1_s.jpg);
+	}
+	#section2{
+		background-image: url(../images/2_s.jpg);
+	}
+	#section3{
+		background-image: url(../images/3_s.jpg);
+	}
+	#namibia-1{
+		background-image: url(../images/namibia-1s.jpg);
+	}
+	#namibia-2{
+		background-image: url(../images/namibia-2s.jpg);
+	}
+	#namibia-3{
+		background-image: url(../images/namibia-3s.jpg);
+	}
+	#namibia-4{
+		background-image: url(../images/namibia-4s.jpg);
+	}
+	#bromo-2{
+		background-image: url(../images/bromo-2s.jpg);
+	}
+	#promo{
+		background-image: url(../images/promotion_s.jpg);
+	}
+	#mobnav-btn{
+		line-height:55px;
+		height:55px;
+	}
+	.container{
+		width:100%;
+	}
+	#navigation{
+		min-height:55px;
+	}
+	a.mdrive_btn{ margin:13px 10px; }
+	.logo-nav a{
+		height: 60px;
+		width: 60px;
+		background-size: 100%;
+		top:0;
+		margin: 0;
+	}
+	.iconBmwID{
+		right:65px;
+	}
+	.thecontent{
+		padding:70px 0 0 0;
+	}
+	.autoheight .col-md-6{
+		width:100%;
+	}
+	.contentbanner h2, .thecontent h2, .container h2{
+		font-size:24px;
+	}
+	h3{
+		font-size:16px;
+	}
+	p{ font-size:12px; margin:0 0 10px 0;}
+	#subscribe h3{ margin:0 0 5px 0; line-height:20px;}
+	#subscribe .relative{ width:100%; margin:0 0 10px 0;}
+	#subscribe input{ width:250px; }
+	#subscribe label.error{ width:100%;}
+	.contentbanner{ margin:-50px 0 0 0;}
+	#myCountdown{ top:10px; }
+	.scrolldown{ bottom:0px; font-size:30px; margin:0px 0 0 -15px; width:30px;}
+	.play{ width:60px; height:60px; margin:-30px 0 0 -30px;}
+	.play i.icon-play:before{
+		width:66px; line-height:60px;
+	}
+	#section2 .contentbanner{ margin:-365px 0 0 0;}
+	#bannerpage{ margin:55px 0 0 0; }
+	#productGenius br{ display:none;}
+	.button {
+		padding: 0 20px;
+		line-height: 36px;
+		height: 30px;
+		font-size: 12px;
+	}
+	#bromoDetail .btnnobg{
+		padding:0;
+		margin:10px 0 0 0;
+	}
+	#route img{ margin:0; position:inherit !important; display:none;}
+	#routebtn{ display:inline-block;}
+	.routecontainer{ margin:150px 0 0 0 !important; position:inherit !important; top:auto !important;}
+	#bromo-3 .col-md-6{ margin:20px 0 0 0;}
+	input[type=checkbox].css-checkbox + label.css-label, input[type=checkbox].css-checkbox + label.css-label.clr{
+		font-size:14px;
+	}
+	#bannerpage{
+		background:#2a5697;
+		max-height:600px;
+		padding:55px 0 0 0;
+		margin:0;
+	}
+	#namibia-5 #bannerpage{
+		padding:120px 0 0 0;
+	}
+	.img-1{
+		top:0px;
+	}
+	.img-3{
+		top:0px;
+	}
+	.img-4{
+		top:0px;
+	}
+	.img-5{
+		top:0px;
+	}
+	.img-6{
+		top:0px;
+	}
+	.img-7{
+		top:0px;
+	}
+	.img-8{
+		top:0px;
+	}
+	.img-9{
+		top:0px;
+	}
+	#banner .colmdcontent{
+		position:absolute;
+		top:420px;
+	}
+	#section2 .contentbanner{
+		margin:0 0 170px 0;
+	}
+	#section3 .contentbanner{
+		margin:0 0 -130px 0;
+	}
+	#namibia-2 .contentbanner{
+		margin:0 0 -100px 0;
+	}
+	#namibia-5 h3{
+		font-size:30px;
+	}
+	.namibia1content{
+		margin:0 0 100px 0;
+	}
+	#footer{
+		max-height:200px;
+		overflow:hidden;
+	}
+	#footerTop{
+		padding:15px 0;
+		max-height:140px
+	}
+	#footerBottom{ height:60px;}
+	#footerBottom a,#footerBottom p.copy{
+		display: block;
+		line-height: 30px;
+		height: 30px;
+		color: #999;
+		font-size: 10px;
+		overflow: hidden;
+		text-align:center;
+	}
+	#footerBottom span:before{ line-height:30px;}
+	#footerBottom ul{ float:none;}
+	#footerBottom ul li{ display:inline-block; float:none;}
+	#footerBottom .col-md-6{ float:none; width:100%; text-align:center;}
+	#f45Detail .thecontent{ padding:320px 0 0 0;}
+	#f45Detail .play{ margin:-95px 0 0 -30px;}
+	#f45Detail p { max-width: none;}
+	#productGenius h2{
+		font-size:20px;
+	}
+	#productGenius .centercontent{
+		padding:20px 0;
+	}
+	#namibia-5{ min-height:500px;}
+	#namibia-5 .centercontent h3{ font-size:150%;}
+	.social{ top:85px;}
+	.social a{
+		width:30px; height:30px;
+	}
+	.social a i:before{
+		width:30px; height:30px;
+		line-height:30px;
+		font-size:16px;
+	}
+	.social a:hover i.icon-facebook:before{
+		content:"\e691";
+		font-size:10px;
+	}
+	.social a:hover i.icon-twitter:before{
+		content:"\e690";
+		font-size:10px;
+	}
+}
+@media (max-width: 375px) {
+	#banner .colmdcontent{
+		top:280px;
+	}
+	#namibia-5 #bannerpage{
+		padding:105px 0 0 0;
+	}
+	#section2 .contentbanner{
+		margin:0 0 -100px 0;
+	}
+	.buttonact{
+		position:relative;
+		margin:0 0 -40px 0;
+	}
+	.namibia1content{ margin:0;}
+	#namibia-5 .centercontent{ padding:0;}
+	.autoheight{
+		min-height:600px !important;
+	}
+}
+@media (max-width: 320px) {
+	#namibia-4{
+		background-image: url(../images/namibia-4ss.jpg);
+	}
+}

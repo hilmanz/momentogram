@@ -1,0 +1,202 @@
+/*
+Theme Name: MOMENTOGRAM
+Author: Acit JAzz
+Version: 1.0
+*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+	margin:0;
+	padding:0;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+}
+* {
+	outline:none !important;
+	font-weight: 300;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+}
+html, body {
+	width:100%;
+	height:100%;
+	padding:0;
+	margin:0;
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+fieldset, img {
+	border:0;
+}
+input {
+	border:1px solid #b0b0b0;
+	padding:3px 5px 4px;
+	color:#979797;
+	width:190px;
+}
+address, caption, cite, code, dfn, th, var {
+	font-style:normal;
+	font-weight:normal;
+}
+/* ========================= GENERAL STYLE ========================= */
+ol, ul {
+	list-style:none;
+}
+caption, th {
+	text-align:left;
+}
+h1, h2, h3, h4, h5, h6, strong, b {
+	font-size:100%;
+}
+h1 {
+	font-size:50px;
+}
+h2{
+	font-size: 30px;
+}
+h3 {
+	font-size:20px;
+}
+h4 {
+	font-size:18px;
+}
+p {
+	font-size:14px;
+	margin:0 0 30px 0;
+}
+.fl {
+	float:left;
+}
+.fr {
+	float:right;
+}
+q:before, q:after {
+	content:'';
+}
+.center {
+	text-align:center;
+}
+abbr, acronym {
+	border:0;
+}
+a {
+	color: #fff;
+	text-decoration: none;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+a:hover, a:active, a:focus {
+	text-decoration:none;
+	color:#c1181c;
+	outline:none;
+}
+body {
+	background-image: url(../images/bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-weight: 400;
+	font-size: 14px;
+	color: #262626;
+}
+#universal{
+	padding: 120px 0 0 0;
+}
+/* ========================= HEADER ========================= */
+#header{
+	text-align: center;
+	padding: 20px 0;
+	margin: 0 0 40px 0;
+}
+.flip-content{
+	overflow: hidden;
+	background: #427e37;
+}
+.content{
+	width: 400px;
+	height: 400px;
+}
+.flip-content img{
+	min-height: 400px;
+	width: 100%;
+}
+
+#footer{
+	padding: 50px 0;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	left: 0;
+	text-align: center;
+}
+#footer .container{
+	position: relative;
+}
+.icon-e{
+	position: absolute;
+	right: 50px;
+	top: 50px;
+}
+.flip-item{
+	box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+.flip-item:before{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 30%;
+	top: 100%;
+	background: -moz-linear-gradient(top, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.55)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(0,0,0,0.55) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(0,0,0,0.55) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(0,0,0,0.55) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(0,0,0,0.55) 0%,rgba(0,0,0,0) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8c000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+	left: 0;
+}
+
+.content{
+	position: relative;
+}
+#socialfeed .pull-left{
+	width: 38px; height: 38px;
+	overflow: hidden;
+	border-radius: 100px;
+	border: solid 2px #fff;
+}
+#socialfeed .pull-left img{
+	width: 35px; height: 35px;
+	min-height: 35px;
+}
+.author{
+	bottom: 0;
+	margin: 0;
+	text-align: right;
+}
+.author span{
+	display: block;
+	color: #fff;
+}
+.author span.muted{
+	font-size: 12px;
+	color: #ddd;
+}
+.social-instagram .text-wrapper{
+	display: none;
+}
+.media-body{
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	padding: 10px;
+	background: rgba(0,0,0,0.7);
+}
+.social-feed-text{
+	margin: 0;
+	color: #fff;
+	padding: 30px;
+	font-size: 30px;
+	line-height: 42px;
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie ie6 no-js" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7 no-js" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8 no-js" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9 no-js" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
+    <head> 
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <title>MOMENTOGRAM</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="MOMENTOGRAM" />
+        <meta name="keywords" content="MOMENTOGRAM" />
+        <meta name="author" content="MOMENTOGRAM" />
+        <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.css" />
+        <link rel="stylesheet" type="text/css" href="vendor/prettyphoto/css/prettyPhoto.css" />
+        <link rel="stylesheet" type="text/css" href="css/animate.css" />
+        <link rel="stylesheet" type="text/css" href="vendor/eufont/eufont.css" />
+        <link rel="stylesheet" type="text/css" href="vendor/flipster/jquery.flipster.css" />
+        <link rel="stylesheet" type="text/css" href="vendor/magnific-popup/magnific-popup.css" />
+        <link rel="stylesheet" type="text/css" href="vendor/owlcarousel/owl.carousel.css" />
+        <link rel="stylesheet" type="text/css" href="vendor/owlcarousel/owl.theme.css" />
+        <link rel="stylesheet" type="text/css" href="vendor/owlcarousel/owl.transitions.css" />
+        <link rel="stylesheet" type="text/css" href="css/momentogram.css" />
+        <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+        <!-- jQuery -->
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <!-- Codebird.js - required for TWITTER -->
+        <script src="bower_components/codebird-js/codebird.js"></script>
+        <!-- doT.js for rendering templates -->
+        <script src="bower_components/doT/doT.min.js"></script>
+        <!-- Moment.js for showing "time ago" -->
+        <script src="bower_components/moment/min/moment.min.js"></script>
+        <!-- Social-feed js -->
+        <script src="js/jquery.socialfeed.js"></script>
+        <script src="vendor/flipster/jquery.flipster.min.js"></script>
+    </head>
+
+<body>
+<div id="header"> 
+<div class="logo"><a href="index.php?page=home"><img src="images/logo.png" /></a> </div>
+</div><!-- end #header --> 
+    <div id="slider">
+    <div class="flipster">
+        <ul id="socialfeed">
+        </ul>
+    </div>
+    </div><!-- end #slider -->
+    <section class="stripe" style="display:none;">
+        <div class="container field">
+            <input type="text" class="input field-left" value="#openbondsworld" id="query">
+            <button class='button field-right' id="button-update"><i class="fa fa-refresh"></i></button>
+        </div>
+    </section>
+    <div id="footer">
+    <div class="container">
+        <img src="images/text.png"/>
+    </div><!-- end .container -->
+</div>
+    <script>
+    $(document).ready(function() {
+
+        var updateFeed = function() {
+            var initialQuery = $('#query').val();
+            initialQuery = initialQuery.replace(" ", "");
+            var queryTags = initialQuery.split(",");
+            $('#socialfeed').socialfeed({
+                // Twitter
+                twitter: {
+                    accounts: queryTags,
+                    limit: 5,
+                    consumer_key: 'qzRXgkI7enflNJH1lWFvujT2P', // make sure to have your app read-only
+                    consumer_secret: '8e7E7gHuTwyDHw9lGQFO73FcUwz9YozT37lEvZulMq8FXaPl8O', // make sure to have your app read-only
+                },
+                // INSTAGRAM
+                instagram: {
+                    accounts: queryTags,
+                    limit: 5,
+                    client_id: '03df29c2901d48c7b5809849f235ce68'
+                },
+
+                // GENERAL SETTINGS
+                length: 200,
+                show_media: true,
+                // Moderation function - if returns false, template will have class hidden
+                moderation: function(content) {
+                    return (content.text) ? content.text.indexOf('fuck') == -1 : true;
+                },
+                //update_period: 5000,
+                // When all the posts are collected and displayed - this function is evoked
+                callback: function() {
+                    $(function(){ 
+                        $(".flipster").flipster({
+                            style: 'carousel',
+                            autoplay: 500,
+                        });
+                    });
+                     setInterval(function(){
+                        $(".flipster").flipster(
+                            'jump', 'right'
+                        );
+                    },5000);
+                }
+            });
+        };
+
+        updateFeed();
+        function loadlink(){
+          $( "#button-update" ).trigger( "click" );
+            $(function(){ 
+                $(".flipster").flipster({
+                    style: 'carousel',
+                    autoplay: 500,
+                });
+            });
+        }
+        setInterval(function(){
+            updateFeed();
+        }, 15000);
+        $('#button-update').click(function() {
+            $('#socialfeed').html('');
+            updateFeed();
+        });
+
+    });
+    </script>
+</body>
+
+</html>

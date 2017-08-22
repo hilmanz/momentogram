@@ -1,0 +1,143 @@
+.slicknav_menu,#navmobile{
+	display:none;
+}
+@media (max-width: 1360px;) {
+	.container{ width:90%; margin:0 auto;}
+} 
+@media only screen and (max-width: 960px) {
+}
+@media only screen and (max-width: 800px) {
+	.logo{ text-align:center;}
+	.logo img{ max-width:150px; width:100%;}
+	#menu{ display:none;}
+	.slicknav_menu{
+		display:block;
+		background:none;
+		text-align:center;
+	}
+	#navmobile{ display:block;}
+	.slicknav_nav a.logohead{ display:none;}
+	.slicknav_btn{ background:none; display:inline-block; padding:0; float:none; margin:30px 0;}
+	.slicknav_menu .slicknav_icon-bar{
+		background:#ea262a;
+		margin:5px 0;
+		width:40px; height:5px; border-radius:5px;
+	}
+	.slicknav_nav a,.slicknav_nav .slicknav_row:hover{
+		background:#ea262a;
+		line-height:50px;
+		color:#fff;
+		font-weight:normal;
+		font-family: 'Montserrat', sans-serif;
+		text-transform:uppercase;
+		font-size:20px;
+		text-align:left;
+		padding:5px 20px;
+		border-radius:0;
+	}
+	.slicknav_nav .slicknav_row{ padding:5px 20px;}
+	.slicknav_nav ul{ margin:0;}
+	.slicknav_nav ul a{
+		background:#9e1518;
+	}
+	.catlist{ display:none;}
+	.catbox{ padding: 30px 0 10px 0;}
+	.catbox img{ width:40px; height:auto; margin:0 20px 0 0;}
+	p{ font-size:16px;}
+	.catbox .slicknav_btn span{ display:none;}
+	.catbox .slicknav_btn{ position:relative; width:210px; height:40px; margin:0 auto;}
+	.catbox .slicknav_btn:before{
+		content:'Choose category';
+		position:absolute;
+		color:#ea262a;
+		width:100%; left:0; top:0;
+		font-size:20px;
+		text-align:left;
+	}
+	.catbox .slicknav_btn:after{
+		content: "\e671";
+		font-family: 'eufont';
+		right:0; top:0;
+		font-size:20px;
+		position:absolute;
+	}
+	.gallerybox .entry-container{
+		padding:30px 0 10px 0;
+	}
+	#address .col-md-4{
+		width: 33%;
+		float: left;;
+	}
+	.contactform{
+		margin: 0 auto 40px auto;
+	}
+	.cd-timeline-content .cd-thumb{
+		float: none;
+	}
+	.owl-controls{
+		bottom: 10px;
+	}
+	.item{
+		width: 50%;
+	}
+}
+@media (max-width: 600px) {
+	#aboutcosmic{
+		background-image:url(../images/bg_about2.jpg);
+	}
+	#footer .copy{
+		text-align:center;
+	}
+	#footer .fr{ float:none; text-align:center;}
+	#footer .center{
+		padding:20px 0;
+	}
+	.ribbontitle{ max-width:300px;}
+	.tabtitle a{ width:300px; font-size:24px;}
+	.cd-thumb:after{ display:none;}
+	.flexslider{ min-height:inherit;}
+	.slidecontent h2{
+		font-size: 30px;
+	}
+	.owl-controls{
+		display: none !important;
+	}
+	.slide-item .button{
+		display: none;
+	}
+	.slidecontent{
+		top: 25%;
+	}
+	.item{
+		width: 100%;
+	}
+	#address .col-md-4{
+		width: 100%;
+	}
+	#address,.contactform{
+		padding: 0 20px;
+	}
+	.page-title{
+		padding: 20px 0;
+	}
+}
+@media (max-width: 375px){
+	#galleries{
+		padding:40px 0 85px 0;
+	}
+	div.pp_pic_holder,.pp_content,div.light_square .pp_details{
+		width:100% !important;
+		left:auto !important;
+	}
+	.pp_hoverContainer{
+		width:auto !important;
+	}
+	div.light_square .pp_description,.pp_social{
+		width:100%; float:none;
+	}
+	div.light_square .pp_expand{ display:none !important}
+	.pp_social {
+	  padding: 0 20px 20px 20px;
+	  overflow: hidden;
+	}
+}
